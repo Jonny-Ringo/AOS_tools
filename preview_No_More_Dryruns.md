@@ -14,7 +14,7 @@ This guide explains how to use the `patch@1.0` AO-Core device to create RESTful-
 
 ## Implementation
 
-> To run this version of AO processes (2.0.4) first get the preview with `npm i -g [https://preview_ao.g8way.io](https://preview_ao.g8way.io/)` 
+> To run this version of AO processes (2.0.4) first get the preview with `npm i -g https://preview_ao.g8way.io` 
 Then run `.update`  in your process to update to `2.0.4` before using state updates or it wont work correctly. You can also create a new process after this update instead if you are not migrating an existing one.
 > 
 
