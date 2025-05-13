@@ -28,18 +28,26 @@ Add this initial sync at the top of your process code:
 -- Sync state on spawn
 InitialSync = InitialSync or 'INCOMPLETE'
 if InitialSync == 'INCOMPLETE' then
-   Send({
-    device = 'patch@1.0',
-    cache = {
+   -- Create the data structure
+   local cacheData = {
       table1 = { 
         [recordId1] = table1[recordId1] 
       },
       table2 = {
         [recordId2] = table2[recordId2]
       }
-    }
-  })
-  InitialSync = 'COMPLETE'
+   }
+   
+   -- Encode the entire cache data as a JSON string
+   local cacheJson = json.encode(cacheData)
+   
+   -- Send message with string values
+   Send({
+      device = 'patch@1.0',
+      cache = cacheJson
+   })
+   
+   InitialSync = 'COMPLETE'
 end
 ```
 
@@ -58,17 +66,20 @@ Handlers.add('update-data', function(msg)
     field2 = msg.From 
   }
   
-  -- Export the updated state
+  -- Create the data structure
+  local cacheData = {
+    table1 = { 
+      [recordId1] = table1[recordId1] 
+    },
+    table2 = {
+      [recordId2] = table2[recordId2]
+    }
+  }
+  
+  -- Export the updated state with JSON encoding
   Send({
     device = 'patch@1.0',
-    cache = {
-      table1 = { 
-        [recordId1] = table1[recordId1] 
-      },
-      table2 = {
-        [recordId2] = table2[recordId2]
-      }
-    }
+    cache = json.encode(cacheData)  -- Encode as single JSON string
   })
   
   -- Rest of handler logic...
@@ -89,43 +100,6 @@ Your process data is now accessible via any HyperBEAM node:
 
 - Get latest state: `https://router-1.forward.computer/YOUR_PROCESS_ID~process@1.0/now/cache`
 - Get pre-computed state: `https://router-1.forward.computer/YOUR_PROCESS_ID~process@1.0/compute/cache`
-
-## Sample Response Format
-
-When accessing your data via the HTTP endpoints, the response will look like this:
-
-```
---_XyZ123AbCdEfGhIjKlMnOpQrStUvWxYz456789
-ao-types: field1="string", field2="integer", field3="integer"
-recordId: record123
-content-disposition: form-data;name="table1/1"
-field1: value1
-field2: 1000000
-field3: 42
-owner: wallet123
-metadata: metadata456
---_XyZ123AbCdEfGhIjKlMnOpQrStUvWxYz456789
-ao-types: field1="string", field2="integer", field3="integer"
-recordId: record456
-content-disposition: form-data;name="table1/2"
-field1: value2
-field2: 5000000
-field3: 7
-owner: wallet789
-metadata: metadata123
---_XyZ123AbCdEfGhIjKlMnOpQrStUvWxYz456789
-ao-types: amount="integer", timestamp="integer"
-recordId: record123
-content-disposition: form-data;name="table2/1"
-amount: 50000000
-timestamp: 1745944965943
-user: wallet456
-reference: record123
---_XyZ123AbCdEfGhIjKlMnOpQrStUvWxYz456789--
-
-```
-
-Responses will include a boundary hash (e.g., `--_XyZ123AbCdEfGhIjKlMnOpQrStUvWxYz456789` in the above example) that acts as a form-data separator, with each record containing:
 
 - Type definitions (`ao-types`)
 - Record identifiers
