@@ -8,44 +8,31 @@ To qualify for a Glasseaters asset, you must:
 Submit a Pull Request (PR) on the [HyperBEAM GitHub](https://github.com/permaweb/HyperBEAM) repository that creates a new device
 Have your PR successfully merged into the project
 
-Submission Process
+### Submission Process
 
-Create your device for HyperBEAM
-Submit a PR using the Glasseaters PR template (see below)
-Share your PR in the #glasseaters channel on AO Discord, including your PR link
-Wait for review - if merged, you become eligible to claim your asset
-Submit wallet address via Discord ticket
-Claim your asset through the designated site
+1. Create your device for HyperBEAM
+2. Submit a PR using the Glasseaters PR template (see below)
+3. **Share your PR link in the #glass-eater-pr channel on AO Discord WITH your Arweave address**
+4. Wait for review - if merged, we will reach out and send you your Atomic Asset!
 
-Rewards
+### Rewards
 
-Glasseaters Atomic Asset (rare 1/1 collectible)
-Enhanced Bazar Profile with a special ring and tiny Glasseater icon saluting beside your profile picture
-Potential Discord Role (to be determined)
+- [Glasseaters Atomic Asset](link) (rare 1/1 collectible)
+- Enhanced Bazar Profile with a special ring and tiny Glasseater icon saluting beside your profile picture
+- @glasseater Discord Role
 
-PR Submission Template
-Thank you for contributing to **HyperBEAM**. If your PR is accepted, you may be eligible to claim the limited edition *Glasseaters* atomic asset on Bazar.
-[Link to Glasseater Atomic Asset](https://go.here)
-Please complete all sections below before submitting:
+### PR Submission Checklist
+
+Please make sure you complete all sections below before submitting:
 
 **PR Checklist**
-* My PR adds a new device or improves existing functionality (link issue if applicable).
-* I have included my Bazar Profile ID below.
-* I have included my Discord username (e.g., user#0000).
-* After submitting this PR, I will post the PR link in the #glasseaters channel in the AO Discord to confirm submission.
+* I Briefly described the purpose of this PR and what functionality it adds or updates.
+* I have included my Discord username (e.g., user#0000) notated in my PR on Github.
+* After submitting this PR, I have posted the PR link in the [#glass-eater-pr channel](https://discord.gg/b6f9d9t4eT) with my Arweave/AO address to complete the submission process.
 
-**PR Summary**
-Briefly describe the purpose of this PR and what functionality it adds or updates.
-
-**Linked Issue (if any)**
-Paste the GitHub issue link (optional but helpful).
-
-**Bazar Profile ID**
-Paste your AO Profile ID (found in your Bazar sidebar).
-
-**Discord Username**
-Enter your full Discord handle (e.g., name#1234).
+Thank you for contributing to **HyperBEAM**. If your PR is accepted, you may be eligible to recieve the limited edition *Glasseaters* atomic asset on Bazar.
+[Link to Glasseater Atomic Asset](https://go.here)
 
 **Note:**
-Only contributors who complete this form and post their PR in the #glasseaters Discord channel will be eligible to claim the Glasseaters atomic asset and any associated community roles or recognition.
+Only contributors who complete this full process and post their PR in the #glasseaters Discord channel will be eligible to claim the Glasseaters atomic asset and any associated community roles or recognition.
 Important: Your Discord ID must be included in your PR submission, and you must share your PR in the designated Discord channel to prevent unauthorized claims of your work.
