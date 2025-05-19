@@ -13,7 +13,7 @@ Have your PR successfully merged into the project
 1. Fork the HyperBEAM repo to start your PR process.
 2. Create your custom device for HyperBEAM and test on your local build or HyperBEAM node.
 3. Submit a PR using the Glasseaters PR checklist (see below).
-4. **Share your PR link in the #glass-eater-pr channel on AO Discord WITH your Arweave address**.
+4. **Share your PR link in the #glass-eater-pr channel on AO Discord WITH your Bazar profile address**.
 5. Wait for review - if merged, we will reach out and send you your Atomic Asset!
 
 ### Rewards
@@ -29,7 +29,7 @@ Please make sure you complete all sections below before submitting:
 **PR Checklist**
 * I Briefly described the purpose of this PR and what functionality it adds or updates.
 * I have included my Discord username (e.g., user#0000) notated in my PR on Github.
-* After submitting this PR, I have posted the PR link in the [#glass-eater-pr channel](https://discord.gg/b6f9d9t4eT) with my Arweave/AO address to complete the submission process.
+* After submitting this PR, I have posted the PR link in the [#glass-eater-pr channel](https://discord.gg/b6f9d9t4eT) with my Bazar profile address to complete the submission process.
 
 Thank you for contributing to **HyperBEAM**. If your PR is accepted, you may be eligible to recieve the limited edition *Glasseaters* atomic asset on Bazar.
 [Link to Glasseater Atomic Asset](https://go.here)
